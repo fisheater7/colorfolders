@@ -1,6 +1,10 @@
 //
 // Color Folders v1.0
-// Copyright(c) 2011 fisheater
+// Color Folders v1.1
+//   Modified to follow the API change in Gecko 22 and onwards
+//   (NB: TB replaced Gecko 17 with "24" at TB 24)
+//   thanks so much to Strim for providing thie modification.
+// Copyright(c) 2011-2013 fisheater
 //
 
 if(!com) var com = {};
@@ -13,9 +17,8 @@ com.fisheater.colorFolders = {
 		
 		// override getCellProperties()
 		gFolderTreeView.originalGetCellProperties = gFolderTreeView.getCellProperties;
-		gFolderTreeView.getCellProperties = function(row, col, props) {
-			gFolderTreeView.originalGetCellProperties(row, col, props);
-			var aAtomService = Components.classes["@mozilla.org/atom-service;1"].getService(Components.interfaces.nsIAtomService);
+		gFolderTreeView.getCellProperties = function(row, col) {
+			var props = gFolderTreeView.originalGetCellProperties(row, col);
 			if (col.id == "folderNameCol") {
 				var folder = gFolderTreeView.getFolderForIndex(row);
 				var folderColor;
@@ -27,9 +30,10 @@ com.fisheater.colorFolders = {
 					}
 					
 					// save folder color
-					props.AppendElement(aAtomService.getAtom(folderColor));
+					props += " " + folderColor;
 				}
 			}
+			return props;
 		}
 		// end of override
 		
