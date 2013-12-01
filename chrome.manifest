@@ -1,0 +1,8 @@
+content colorfolders chrome/
+skin colorfolders classic/1.0 chrome/skin/
+skin colorfolders classic/1.0 chrome/skin/aero/ os=WINNT osversion>=6
+locale colorfolders en-US locale/en-US/
+locale colorfolders en-GB locale/en-GB/
+locale colorfolders ja-JP locale/ja-JP/
+overlay chrome://messenger/content/messenger.xul chrome://colorfolders/content/colorfolders.xul
+style chrome://messenger/content/messenger.xul chrome://colorfolders/content/colorfolders.css
