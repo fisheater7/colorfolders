@@ -33,12 +33,19 @@
         <em:description>フォルダツリービューのアイコンの色を変更します。</em:description>
       </Description>
     </em:localized>
+    <em:localized>
+      <Description>
+        <em:locale>fr-FR</em:locale>
+        <em:name>Color Folders</em:name>
+        <em:description>Dossier en couleur icônes en arborescence.</em:description>
+      </Description>
+    </em:localized>
 
     <em:targetApplication>
       <Description>
         <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id><!-- Thunderbird -->
         <em:minVersion>3.0</em:minVersion>
-        <em:maxVersion>24.*</em:maxVersion>
+        <em:maxVersion>52.*</em:maxVersion>
       </Description>
     </em:targetApplication>
 
