@@ -14,7 +14,7 @@ if(!com.fisheater.colorFolders) com.fisheater.colorFolders = {};
 com.fisheater.colorFolders = {
 	init: function() {
 		window.removeEventListener("load", com.fisheater.colorFolders.init, false);
-		
+
 		// override getCellProperties()
 		gFolderTreeView.originalGetCellProperties = gFolderTreeView.getCellProperties;
 		gFolderTreeView.getCellProperties = function(row, col) {
@@ -28,7 +28,7 @@ com.fisheater.colorFolders = {
 					if (compatibility) {
 						folderColor = compatibility;
 					}
-					
+
 					// save folder color
 					props += " " + folderColor;
 				}
@@ -36,11 +36,11 @@ com.fisheater.colorFolders = {
 			return props;
 		}
 		// end of override
-		
+
 		// addEventListener for onPopupShowing for folderPaneContext
 		var elm = document.getElementById("folderPaneContext");
 		elm.addEventListener("popupshowing", com.fisheater.colorFolders.onPopupShowing, false);
-		
+
 		// addEventListener for onCommand for folderColorPopup
 		elm = document.getElementById("folderColorPopup");
 		elm.addEventListener("command", com.fisheater.colorFolders.setFolderColor, false);
@@ -64,13 +64,14 @@ com.fisheater.colorFolders = {
 				folderColor = "";
 			}
 		}
-		
+
 		// apply for all selected folders
 		var folders = gFolderTreeView.getSelectedFolders();
-		for each (var folder in folders) {
+		//for each (var folder in folders) {
+		for (let folder of folders) {
 			folder.setStringProperty("folderColor", folderColor)
 		}
-		
+
 		// close popup
 		// necessary as selecting colorpicker does not close popup
 		// must be here otherwise 'selectedFolders' are lost and gets back to previous selection
@@ -90,7 +91,8 @@ com.fisheater.colorFolders = {
 				| nsMsgFolderFlags.Archive | nsMsgFolderFlags.Junk | nsMsgFolderFlags.Queue;
 			var folders = gFolderTreeView.getSelectedFolders();
 			var type = "";
-			for each (var folder in folders) {
+			//for each (var folder in folders) {
+			for (let folder of folders) {
 				if ( folder.isServer || folder.flags & specialFolderFlagsMask ) {
 					// to disable menu "folderPaneContext-colorFolders" if any one of folders is special
 					type = "special";
@@ -105,7 +107,7 @@ com.fisheater.colorFolders = {
 						type = "normal";
 						break;
 					}
-				}					
+				}
 				else if ( folder.server.type == "nntp" || folder.server.type == "rss" ) {
 					// to have standard folder icons in popup if not all types are the same
 					if (type == "") {
@@ -131,20 +133,20 @@ com.fisheater.colorFolders = {
 				if (type == "virtual" ) {
 					// having virtual folder icons in popup if all folders are virtual
 					aPopup.setAttribute("class", "folderColorVirtual", "");
-				}	
+				}
 				else if (type == "rss" ) {
 					// having rss folder icons in popup if all folders are rss
 					aPopup.setAttribute("class", "folderColorRss", "");
-				}	
+				}
 				else if (type == "nntp" ) {
 					// having nntp folder icons in popup if all folders are nntp
 					aPopup.setAttribute("class", "folderColorNntp", "");
-				}	
+				}
 				else {
 					// having standard folder icons in popup if any one of folders is normal
 					aPopup.setAttribute("class", "folderColorDefault", "");
 				}
-				
+
 				// set "More Colors..." menu an icon
 				var folderColor = document.getElementById("folderColorPicker").color;
 				folderColor = "folderColor" + folderColor.substring( 1, 7 );
@@ -153,7 +155,7 @@ com.fisheater.colorFolders = {
 			}
 		}
 	},
-	
+
 	compatibility: {
 		folderColorG0:			"folderColorCCCCCC",
 		folderColorG1:			"folderColor999999",
@@ -167,7 +169,7 @@ com.fisheater.colorFolders = {
 		folderColorViolet:		"folderColor6633FF",
 		folderColorMagenta:		"folderColorCC33CC"
 	}
-		
+
 };
 
 window.addEventListener("load", com.fisheater.colorFolders.init, false);
