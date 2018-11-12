@@ -5,32 +5,39 @@
 
   <Description about="urn:mozilla:install-manifest">
     <em:type>2</em:type>
-    <em:name>Color Folders</em:name>
+    <em:name>Color Folders Revived</em:name>
     <em:description>Color Folder Treeview Icons.</em:description>
 
     <em:id>colorfolders@fisheater.com</em:id>
     <em:creator>fisheater</em:creator>
-    <em:version>1.1</em:version>
+    <em:version>2.0</em:version>
     <em:iconURL>chrome://colorfolders/content/colorfolders.png</em:iconURL>
     <em:localized>
       <Description>
         <em:locale>en-US</em:locale>
-        <em:name>Color Folders</em:name>
+        <em:name>Color Folders Revived</em:name>
         <em:description>Color Folder Treeview Icons.</em:description>
       </Description>
     </em:localized>
     <em:localized>
       <Description>
         <em:locale>en-GB</em:locale>
-        <em:name>Colour Folders</em:name>
+        <em:name>Colour Folders Revived</em:name>
         <em:description>Colour Folder Treeview Icons.</em:description>
       </Description>
     </em:localized>
     <em:localized>
       <Description>
         <em:locale>ja-JP</em:locale>
-        <em:name>Color Folders</em:name>
+        <em:name>Color Folders Revived</em:name>
         <em:description>フォルダツリービューのアイコンの色を変更します。</em:description>
+      </Description>
+    </em:localized>
+    <em:localized>
+      <Description>
+        <em:locale>fr-FR</em:locale>
+        <em:name>Color Folders Revived</em:name>
+        <em:description>De la couleur pour les icones des dossiers de l'arborescence.</em:description>
       </Description>
     </em:localized>
 
@@ -38,7 +45,7 @@
       <Description>
         <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id><!-- Thunderbird -->
         <em:minVersion>3.0</em:minVersion>
-        <em:maxVersion>24.*</em:maxVersion>
+        <em:maxVersion>65.*</em:maxVersion>
       </Description>
     </em:targetApplication>
 
