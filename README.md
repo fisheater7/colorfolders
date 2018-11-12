@@ -1,7 +1,7 @@
-colorfolders
+ColorFolders Revived
 ============
 
-Color Folders the Thunderbird Add On
+Color Folders the Thunderbird Add On...Revived.
 
 Please see below for detail:
 
