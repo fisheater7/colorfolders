@@ -33,6 +33,13 @@
         <em:description>フォルダツリービューのアイコンの色を変更します。</em:description>
       </Description>
     </em:localized>
+    <em:localized>
+      <Description>
+        <em:locale>fr-FR</em:locale>
+        <em:name>Color Folders WR</em:name>
+        <em:description>De la couleur pour les icones des dossiers de l'arborescence.</em:description>
+      </Description>
+    </em:localized>
 
     <em:targetApplication>
       <Description>
