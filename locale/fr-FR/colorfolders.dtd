@@ -1,0 +1,14 @@
+<!ENTITY menu_colorfolders.label "Color Folders...">
+<!ENTITY menu_default.label "Par défaut">
+<!ENTITY menu_gray0.label "Gris clair">
+<!ENTITY menu_gray1.label "Gris">
+<!ENTITY menu_gray2.label "Gris foncé">
+<!ENTITY menu_red.label "Rouge">
+<!ENTITY menu_yellow.label "Jaune">
+<!ENTITY menu_yellowgreen.label "Citron vert">
+<!ENTITY menu_green.label "Vert">
+<!ENTITY menu_cyan.label "Cyan">
+<!ENTITY menu_blue.label "Bleu">
+<!ENTITY menu_violet.label "Violet">
+<!ENTITY menu_magenta.label "Magenta">
+<!ENTITY menu_morecolors.label "Plus de couleurs...">
