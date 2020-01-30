@@ -1,8 +1,10 @@
 colorfolders
 ============
 
-Color Folders the Thunderbird Add On
+This is a fork from [https://github.com/fisheater7/colorfolders](https://github.com/fisheater7/colorfolders)
+which appears to no longer be maintained.
 
-Please see below for detail:
+This version is compatible up to Thunderbird 68 (current as of 2020/01/29).
 
-[https://addons.mozilla.org/thunderbird/addon/color-folders/](https://addons.mozilla.org/thunderbird/addon/color-folders/)
+To install, download the zip, rename from `.zip` to `.tbi` and install it.
+
