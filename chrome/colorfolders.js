@@ -67,7 +67,7 @@ com.fisheater.colorFolders = {
 		
 		// apply for all selected folders
 		var folders = gFolderTreeView.getSelectedFolders();
-		for each (var folder in folders) {
+		for (let folder of folders) {
 			folder.setStringProperty("folderColor", folderColor)
 		}
 		
@@ -90,7 +90,7 @@ com.fisheater.colorFolders = {
 				| nsMsgFolderFlags.Archive | nsMsgFolderFlags.Junk | nsMsgFolderFlags.Queue;
 			var folders = gFolderTreeView.getSelectedFolders();
 			var type = "";
-			for each (var folder in folders) {
+			for (let folder of folders) {
 				if ( folder.isServer || folder.flags & specialFolderFlagsMask ) {
 					// to disable menu "folderPaneContext-colorFolders" if any one of folders is special
 					type = "special";
